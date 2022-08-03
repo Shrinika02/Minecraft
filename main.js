@@ -107,3 +107,44 @@ function my_keypressed(e){
         console.log("c")
     }
 }
+
+function up(){
+    if (player_y > 0){
+        player_y=player_y-block_img_height;
+        console.log("The block image height is "+block_img_height);
+        console.log("players x position is "+player_x+" players y position is "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function down(){
+    if (player_y < 500){
+        player_y=player_y+block_img_height;
+        console.log("The block image height is "+block_img_height);
+        console.log("players x position is "+player_x+" players y position is "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+
+    
+}
+
+function right(){
+    if (player_x < 850){
+        player_x=player_x+block_img_width;
+        console.log("The block image width is "+block_img_width);
+        console.log("players x position is "+player_x+" players y position is "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left(){
+    if (player_x > 0){
+        player_x=player_x-block_img_width;
+        console.log("The block image width is "+block_img_width);
+        console.log("players x position is "+player_x+" players y position is "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
